@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
       
@@ -7,12 +8,12 @@
 		<h:form id="form">
 			<h:panelGrid columns="2">
 				Nome:
-				<inputText value="#{loginBean.nome}"/>
+				<h:inputText value="#{loginBean.name}" />
 				Senha:
-				<inputSecret value="#{loginBean.password}"/>
+				<h:inputSecret value="#{loginBean.password}" />
 			</h:panelGrid>
 			
-			<commandButton id="button" value="login" action="#{loginBean.doLogin}"/>
+			<h:commandButton id="button" value="Login" action="#{loginBean.doLogin}" />
 							
 			
 		</h:form>

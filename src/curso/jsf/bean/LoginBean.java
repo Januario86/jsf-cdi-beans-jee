@@ -2,6 +2,8 @@ package curso.jsf.bean;
 
 import java.io.Serializable;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -44,10 +46,15 @@ public class LoginBean implements Serializable {
 		this.password = password;
 	}
 	
+	@PostConstruct
+	public void init() {
+		System.out.println("Bean Criado");	
 	
+	}
 	
-	
-	
-	
+	@PreDestroy
+	public void destroy() {
+		System.out.println("Bean Destruído");
+	}
 	
 }
